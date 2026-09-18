@@ -35,7 +35,7 @@ class AIImageColorizationStudio:
         Args:
             device: Device to run on ('auto', 'cuda', 'cpu')
         """
-        print(f"🎨 Initializing AI Image Colorization Studio")
+        print(f"Initializing AI Image Colorization Studio")
         
         self.device = device
         self.initialized = False
@@ -61,7 +61,7 @@ class AIImageColorizationStudio:
             }
             device = device_map.get(device_choice, "auto")
             
-            print(f"🚀 Initializing all colorization systems on {device}")
+            print(f"Initializing all colorization systems on {device}")
             
             # Initialize all colorizers
             self.colorizers['base'] = BaseColorizer(device=device)
@@ -75,20 +75,20 @@ class AIImageColorizationStudio:
             self.initialized = True
             
             status = f"""
-✅ **AI Image Colorization Studio Initialized Successfully!**
+**AI Image Colorization Studio Initialized Successfully!**
 
-🎯 **System Status:**
+**System Status:**
 • Device: {device}
 • Base Colorizer: Ready
-• Video Colorizer: Ready  
+• Video Colorizer: Ready
 • Conditional Colorizer: Ready
 • Context-Aware Colorizer: Ready
 • Historical Colorizer: Ready
 • Cross-Domain Colorizer: Ready
 • Historical Refinement: Ready
 
-📊 **Quality Metrics System:** Ready
-🖼️ **Image Processing System:** Ready
+**Quality Metrics System:** Ready
+**Image Processing System:** Ready
 
 **All 6 internship tasks are now available!**
 """
@@ -109,10 +109,10 @@ class AIImageColorizationStudio:
     ) -> Tuple[Optional[str], str]:
         """Task 1: Process video with multi-object colorization."""
         if not self.initialized:
-            return None, "❌ Please initialize the system first!"
+            return None, "Please initialize the system first!"
         
         if video_input is None:
-            return None, "❌ Please upload a video file!"
+            return None, "Please upload a video file!"
         
         try:
             # Create temporary output path
@@ -128,9 +128,9 @@ class AIImageColorizationStudio:
             )
             
             status = f"""
-✅ **Task 1: Video Processing Complete!**
+**Task 1: Video Processing Complete!**
 
-📹 **Video Information:**
+**Video Information:**
 • Input: {result['input_video']}
 • Output: {result['output_video']}
 • Original FPS: {result['original_fps']}
@@ -138,17 +138,17 @@ class AIImageColorizationStudio:
 • Resolution: {result['frame_width']}x{result['frame_height']}
 • Frames Processed: {result['processed_frames']}/{result['total_frames']}
 
-🎯 **Processing Options:**
+**Processing Options:**
 • Semantic Segmentation: {result['segmentation_enabled']}
 • Object Colorization: {result['colorization_enabled']}
 
-📊 **Segmentation Results:**
+**Segmentation Results:**
 • Objects Detected: {len(result.get('segmentation_results', []))}
 """
             return output_path, status
             
         except Exception as e:
-            return None, f"❌ **Video Processing Failed:** {str(e)}"
+            return None, f"**Video Processing Failed:** {str(e)}"
     
     # TASK 2: Conditional Colorization
     def process_conditional_task2(
@@ -159,10 +159,10 @@ class AIImageColorizationStudio:
     ) -> Tuple[Optional[Image.Image], str]:
         """Task 2: Conditional colorization with user-specified colors."""
         if not self.initialized:
-            return None, "❌ Please initialize the system first!"
+            return None, "Please initialize the system first!"
         
         if image_input is None:
-            return None, "❌ Please upload an image!"
+            return None, "Please upload an image!"
         
         try:
             # Parse color conditions
@@ -182,14 +182,14 @@ class AIImageColorizationStudio:
             quality_text = self.quality_metrics.format_quality_report(quality_report)
             
             status = f"""
-✅ **Task 2: Conditional Colorization Complete!**
+**Task 2: Conditional Colorization Complete!**
 
-🎨 **Color Conditions Applied:**
+**Color Conditions Applied:**
 • User Input: "{conditions_text}"
 • Parsed Conditions: {len(conditions)} conditions
 • Conditions: {list(conditions.keys()) if conditions else 'None detected'}
 
-🔧 **Processing Method:**
+**Processing Method:**
 • Semantic Segmentation: {use_segmentation}
 • Method: {metadata.get('method', 'unknown')}
 
@@ -198,7 +198,7 @@ class AIImageColorizationStudio:
             return colorized, status
             
         except Exception as e:
-            return None, f"❌ **Conditional Colorization Failed:** {str(e)}"
+            return None, f"**Conditional Colorization Failed:** {str(e)}"
     
     # TASK 3: Context-Aware Colorization
     def process_context_task3(
@@ -208,10 +208,10 @@ class AIImageColorizationStudio:
     ) -> Tuple[Optional[Image.Image], str]:
         """Task 3: Context-aware colorization of complex scenes."""
         if not self.initialized:
-            return None, "❌ Please initialize the system first!"
+            return None, "Please initialize the system first!"
         
         if image_input is None:
-            return None, "❌ Please upload an image!"
+            return None, "Please upload an image!"
         
         try:
             # Apply context-aware colorization
@@ -229,17 +229,17 @@ class AIImageColorizationStudio:
             context_info = metadata.get('scene_context', {})
             
             status = f"""
-✅ **Task 3: Context-Aware Colorization Complete!**
+**Task 3: Context-Aware Colorization Complete!**
 
-🏙️ **Scene Analysis:**
+**Scene Analysis:**
 • Scene Type: {context_info.get('scene_type', 'unknown')}
 • Dominant Objects: {context_info.get('dominant_objects', [])}
 • Lighting: {context_info.get('lighting_estimate', 'unknown')}
 
-🔗 **Object Relationships:**
+**Object Relationships:**
 • Relationships Analyzed: {len(context_info.get('object_relationships', []))}
 
-🎨 **Colorization Parameters:**
+**Colorization Parameters:**
 • Strength: {strength}
 • Method: {metadata.get('method', 'unknown')}
 
@@ -248,7 +248,7 @@ class AIImageColorizationStudio:
             return colorized, status
             
         except Exception as e:
-            return None, f"❌ **Context-Aware Colorization Failed:** {str(e)}"
+            return None, f"**Context-Aware Colorization Failed:** {str(e)}"
     
     # TASK 4: Historical Colorization
     def process_historical_task4(
@@ -260,10 +260,10 @@ class AIImageColorizationStudio:
     ) -> Tuple[Optional[Image.Image], str]:
         """Task 4: Time-based historical image colorization."""
         if not self.initialized:
-            return None, "❌ Please initialize the system first!"
+            return None, "Please initialize the system first!"
         
         if image_input is None:
-            return None, "❌ Please upload an image!"
+            return None, "Please upload an image!"
         
         try:
             # Apply historical colorization
@@ -281,14 +281,14 @@ class AIImageColorizationStudio:
             quality_text = self.quality_metrics.format_quality_report(quality_report)
             
             status = f"""
-✅ **Task 4: Historical Colorization Complete!**
+**Task 4: Historical Colorization Complete!**
 
-📅 **Era Information:**
+**Era Information:**
 • Selected Era: {metadata.get('selected_era', 'unknown')}
 • Selection Method: {metadata.get('era_selection', 'unknown')}
 • Manual Override: {manual_override}
 
-🎨 **Treatment Parameters:**
+**Treatment Parameters:**
 • Treatment Intensity: {treatment_intensity}
 • Era Palette: {metadata.get('treatment_metadata', {}).get('palette_used', 'unknown')}
 
@@ -297,7 +297,7 @@ class AIImageColorizationStudio:
             return colorized, status
             
         except Exception as e:
-            return None, f"❌ **Historical Colorization Failed:** {str(e)}"
+            return None, f"**Historical Colorization Failed:** {str(e)}"
     
     # TASK 5: Cross-Domain Colorization
     def process_cross_domain_task5(
@@ -308,10 +308,10 @@ class AIImageColorizationStudio:
     ) -> Tuple[Optional[Image.Image], str]:
         """Task 5: Cross-domain image colorization."""
         if not self.initialized:
-            return None, "❌ Please initialize the system first!"
+            return None, "Please initialize the system first!"
         
         if image_input is None:
-            return None, "❌ Please upload an image!"
+            return None, "Please upload an image!"
         
         try:
             # Apply cross-domain colorization
@@ -330,14 +330,14 @@ class AIImageColorizationStudio:
             domain_info = metadata.get('domain_info', {})
             
             status = f"""
-✅ **Task 5: Cross-Domain Colorization Complete!**
+**Task 5: Cross-Domain Colorization Complete!**
 
-🌐 **Domain Information:**
+**Domain Information:**
 • Selected Domain: {metadata.get('selected_domain', 'unknown')}
 • Domain Name: {domain_info.get('name', 'unknown')}
 • Selection Method: {metadata.get('domain_selection', 'unknown')}
 
-🔧 **Processing:**
+**Processing:**
 • Preprocessing: {metadata.get('preprocessing', {}).get('preprocessing_method', 'unknown')}
 • Colorization Approach: {domain_info.get('colorization_approach', 'unknown')}
 
@@ -346,7 +346,7 @@ class AIImageColorizationStudio:
             return colorized, status
             
         except Exception as e:
-            return None, f"❌ **Cross-Domain Colorization Failed:** {str(e)}"
+            return None, f"**Cross-Domain Colorization Failed:** {str(e)}"
     
     # TASK 6: Historical Refinement
     def process_historical_refinement_task6(
@@ -358,10 +358,10 @@ class AIImageColorizationStudio:
     ) -> Tuple[Optional[Image.Image], str]:
         """Task 6: Historical photograph refinement."""
         if not self.initialized:
-            return None, "❌ Please initialize the system first!"
+            return None, "Please initialize the system first!"
         
         if image_input is None:
-            return None, "❌ Please upload an image!"
+            return None, "Please upload an image!"
         
         try:
             # Apply historical refinement colorization
@@ -379,20 +379,20 @@ class AIImageColorizationStudio:
             quality_text = self.quality_metrics.format_quality_report(quality_report)
             
             status = f"""
-✅ **Task 6: Historical Refinement Complete!**
+**Task 6: Historical Refinement Complete!**
 
-🖼️ **Refinement Pipeline:**
+**Refinement Pipeline:**
 • Selected Period: {metadata.get('selected_period', 'unknown')}
 • Selection Method: {metadata.get('period_selection', 'unknown')}
 • Refinement Intensity: {refinement_intensity}
 
-🎨 **Pipeline Stages Applied:**
-• Base Colorization: ✅
-• Era Treatment: ✅ (Task 4 infrastructure)
-• Period Refinement: ✅ (Task 6 specific)
-• Final Enhancement: ✅
+**Pipeline Stages Applied:**
+• Base Colorization: Complete
+• Era Treatment: Complete (Task 4 infrastructure)
+• Period Refinement: Complete (Task 6 specific)
+• Final Enhancement: Complete
 
-👤 **Facial Preservation:**
+**Facial Preservation:**
 • Preservation Applied: {metadata.get('preserve_facial_features', False)}
 
 {quality_text}
@@ -400,7 +400,7 @@ class AIImageColorizationStudio:
             return colorized, status
             
         except Exception as e:
-            return None, f"❌ **Historical Refinement Failed:** {str(e)}"
+            return None, f"**Historical Refinement Failed:** {str(e)}"
     
     def create_interface(self) -> gr.Blocks:
         """Create the unified Gradio interface."""
@@ -411,13 +411,13 @@ class AIImageColorizationStudio:
         ) as interface:
             
             gr.Markdown("""
-            # 🎨 AI Image Colorization Studio
-            **ElevanceSkills Generative AI Internship Project**  
+            # AI Image Colorization Studio
+            **ElevanceSkills Generative AI Internship Project**
             Complete implementation of all 6 internship tasks for image colorization
             """)
             
             # System Initialization Tab
-            with gr.Tab("🚀 System Setup"):
+            with gr.Tab("System Setup"):
                 gr.Markdown("### Initialize the Colorization Studio")
                 gr.Markdown("Initialize all AI models and processing systems before using the colorization tasks.")
                 
@@ -427,7 +427,7 @@ class AIImageColorizationStudio:
                         value="Auto (Recommended)",
                         label="Device Selection"
                     )
-                    init_btn = gr.Button("🚀 Initialize System", variant="primary", size="lg")
+                    init_btn = gr.Button("Initialize System", variant="primary", size="lg")
                 
                 init_status = gr.Textbox(
                     label="System Status",
@@ -437,7 +437,7 @@ class AIImageColorizationStudio:
                 )
             
             # Task 1: Video Colorization
-            with gr.Tab("📹 Task 1: Multi-Object Video Colorization"):
+            with gr.Tab("Task 1: Multi-Object Video Colorization"):
                 gr.Markdown("### Real-Time Multi-Object Colorization with Semantic Segmentation")
                 gr.Markdown("Upload a video to colorize it with semantic segmentation and object-specific colors.")
                 
@@ -450,11 +450,11 @@ class AIImageColorizationStudio:
                     colorize_objects = gr.Checkbox(True, label="Apply Object-Specific Colors")
                     fps = gr.Slider(10, 30, 15, step=1, label="Output FPS")
                 
-                process_video_btn = gr.Button("🎬 Process Video", variant="primary")
+                process_video_btn = gr.Button("Process Video", variant="primary")
                 video_status = gr.Textbox(label="Processing Status", lines=8, interactive=False)
             
             # Task 2: Conditional Colorization
-            with gr.Tab("🎨 Task 2: Conditional Colorization"):
+            with gr.Tab("Task 2: Conditional Colorization"):
                 gr.Markdown("### Conditional Image Colorization with User-Specified Colors")
                 gr.Markdown("Specify desired colors for specific objects (e.g., 'sky:blue, grass:green, car:red')")
                 
@@ -471,11 +471,11 @@ class AIImageColorizationStudio:
                 with gr.Row():
                     use_segmentation = gr.Checkbox(True, label="Use Semantic Segmentation")
                 
-                process_cond_btn = gr.Button("🎨 Apply Conditional Colors", variant="primary")
+                process_cond_btn = gr.Button("Apply Conditional Colors", variant="primary")
                 cond_status = gr.Textbox(label="Processing Status", lines=10, interactive=False)
             
             # Task 3: Context-Aware Colorization
-            with gr.Tab("🏙️ Task 3: Context-Aware Colorization"):
+            with gr.Tab("Task 3: Context-Aware Colorization"):
                 gr.Markdown("### Context-Aware Colorization of Complex Scenes")
                 gr.Markdown("Advanced colorization that considers scene context and object relationships.")
                 
@@ -485,11 +485,11 @@ class AIImageColorizationStudio:
                 
                 strength = gr.Slider(0.5, 1.0, 0.8, step=0.05, label="Colorization Strength")
                 
-                process_context_btn = gr.Button("🏙️ Apply Context-Aware Colorization", variant="primary")
+                process_context_btn = gr.Button("Apply Context-Aware Colorization", variant="primary")
                 context_status = gr.Textbox(label="Processing Status", lines=10, interactive=False)
             
             # Task 4: Historical Colorization
-            with gr.Tab("📅 Task 4: Historical Colorization"):
+            with gr.Tab("Task 4: Historical Colorization"):
                 gr.Markdown("### Time-Based Historical Image Colorization")
                 gr.Markdown("Colorize historical photographs with era-specific color treatments.")
                 
@@ -507,11 +507,11 @@ class AIImageColorizationStudio:
                 
                 treatment_intensity = gr.Slider(0.5, 1.0, 0.7, step=0.05, label="Era Treatment Intensity")
                 
-                process_hist_btn = gr.Button("📅 Apply Historical Colorization", variant="primary")
+                process_hist_btn = gr.Button("Apply Historical Colorization", variant="primary")
                 hist_status = gr.Textbox(label="Processing Status", lines=10, interactive=False)
             
             # Task 5: Cross-Domain Colorization
-            with gr.Tab("🌐 Task 5: Cross-Domain Colorization"):
+            with gr.Tab("Task 5: Cross-Domain Colorization"):
                 gr.Markdown("### Cross-Domain Image Colorization")
                 gr.Markdown("Colorize images from different domains: photographs, sketches, infrared, etc.")
                 
@@ -527,11 +527,11 @@ class AIImageColorizationStudio:
                     )
                     auto_detect = gr.Checkbox(True, label="Auto-Detect Domain")
                 
-                process_domain_btn = gr.Button("🌐 Apply Cross-Domain Colorization", variant="primary")
+                process_domain_btn = gr.Button("Apply Cross-Domain Colorization", variant="primary")
                 domain_status = gr.Textbox(label="Processing Status", lines=10, interactive=False)
             
             # Task 6: Historical Refinement
-            with gr.Tab("🖼️ Task 6: Historical Refinement"):
+            with gr.Tab("Task 6: Historical Refinement"):
                 gr.Markdown("### Historical Photograph Colorization Refinement")
                 gr.Markdown("Deep refinement with period-specific treatments and facial preservation.")
                 
@@ -549,7 +549,7 @@ class AIImageColorizationStudio:
                 
                 refinement_intensity = gr.Slider(0.5, 1.0, 0.8, step=0.05, label="Refinement Intensity")
                 
-                process_ref_btn = gr.Button("🖼️ Apply Historical Refinement", variant="primary")
+                process_ref_btn = gr.Button("Apply Historical Refinement", variant="primary")
                 ref_status = gr.Textbox(label="Processing Status", lines=10, interactive=False)
             
             # Event Handlers
@@ -606,7 +606,7 @@ class AIImageColorizationStudio:
 
 def main():
     """Main function to launch the application."""
-    print("🎨 Starting AI Image Colorization Studio...")
+    print("Starting AI Image Colorization Studio...")
     
     # Create the studio
     studio = AIImageColorizationStudio()
@@ -614,7 +614,7 @@ def main():
     # Create and launch the interface
     interface = studio.create_interface()
     
-    print("🚀 Launching Gradio interface...")
+    print("Launching Gradio interface...")
     interface.launch(
         share=True,
         server_name="0.0.0.0",
