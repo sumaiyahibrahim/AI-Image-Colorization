@@ -1,6 +1,9 @@
 """
 Historical Image Colorization Pipeline for Task 4
 Time-based colorization with era detection and manual override.
+
+Author: Sumaiya Ibrahim
+Task: Task 4 - Time-Based Historical Image Colorization
 """
 
 import numpy as np

@@ -1,6 +1,8 @@
 """
 Unified Gradio UI for AI Image Colorization Studio
 Brings together all 6 internship tasks into one cohesive application.
+
+Author: Sumaiya Ibrahim
 """
 
 import gradio as gr
@@ -412,7 +414,7 @@ class AIImageColorizationStudio:
             
             gr.Markdown("""
             # AI Image Colorization Studio
-            **ElevanceSkills Generative AI Internship Project**
+            **Generative AI Internship Project**
             Complete implementation of all 6 internship tasks for image colorization
             """)
             

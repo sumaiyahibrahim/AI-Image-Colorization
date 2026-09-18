@@ -1,11 +1,11 @@
 """
 AI Image Colorization Studio - Main Application Entry Point
-ElevanceSkills Generative AI Internship Project
+Generative AI Internship Project
 
 This is the main entry point for the unified application that implements
 all 6 internship tasks for image colorization.
 
-Author: ElevanceSkills Internship Candidate
+Author: Sumaiya Ibrahim
 Project: AI Image Colorization Studio
 """
 
@@ -21,7 +21,7 @@ from ui.gradio_app import main
 if __name__ == "__main__":
     print("AI Image Colorization Studio")
     print("=" * 50)
-    print("ElevanceSkills Generative AI Internship Project")
+    print("Generative AI Internship Project")
     print("All 6 Tasks Implementation")
     print("=" * 50)
     print()

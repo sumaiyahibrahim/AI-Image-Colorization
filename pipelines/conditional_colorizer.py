@@ -1,6 +1,9 @@
 """
 Conditional Image Colorization Pipeline for Task 2
 Allows users to specify desired colors for specific objects/regions.
+
+Author: Sumaiya Ibrahim
+Task: Task 2 - Conditional Image Colorization
 """
 
 import numpy as np

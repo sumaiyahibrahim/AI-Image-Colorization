@@ -1,6 +1,9 @@
 """
 Historical Photograph Refinement Colorization Pipeline for Task 6
 Deep refinement and period-specific treatment for historical photographs.
+
+Author: Sumaiya Ibrahim
+Task: Task 6 - Historical Photograph Colorization Refinement
 """
 
 import numpy as np

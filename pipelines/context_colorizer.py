@@ -1,6 +1,9 @@
 """
 Context-Aware Colorization Pipeline for Task 3
 Handles complex scenes with contextual relationships between objects.
+
+Author: Sumaiya Ibrahim
+Task: Task 3 - Context-Aware Colorization of Complex Scenes
 """
 
 import numpy as np

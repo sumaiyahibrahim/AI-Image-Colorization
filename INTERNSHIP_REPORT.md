@@ -1,4 +1,4 @@
-# ElevanceSkills Generative AI Internship - Final Report
+# Generative AI Internship - Final Report
 
 **AI Image Colorization Studio: Complete Implementation of 6 Internship Tasks**
 
@@ -8,7 +8,7 @@
 AI Image Colorization Studio: Advanced Image Colorization Using Generative AI
 
 ## Introduction
-This report documents the completion of the ElevanceSkills Generative AI internship project, which focused on building a comprehensive AI-powered image colorization system. The project extends the original Stable Diffusion training course into a unified application that implements all six required internship tasks for image colorization using state-of-the-art generative AI techniques.
+This report documents the completion of the Generative AI internship project, which focused on building a comprehensive AI-powered image colorization system. The project extends the original Stable Diffusion training course into a unified application that implements all six required internship tasks for image colorization using state-of-the-art generative AI techniques.
 
 ## Objective
 The primary objective was to successfully complete all six internship tasks by building on the existing Stable Diffusion training project. Each task required implementing specific colorization capabilities while maintaining technical integrity, demonstrability, and integration within a unified application architecture.
@@ -20,7 +20,7 @@ The project was built upon the "Learn To Build A Real Time Gen AI Image Coloriza
 - Gradio UI development skills
 - Image processing and quality evaluation concepts
 
-The original repository (`https://github.com/aslin72/stable-diffusion-project`) contained a basic Stable Diffusion text-to-image generator that was extended into a comprehensive colorization system.
+The original repository contained a basic Stable Diffusion text-to-image generator that was extended into a comprehensive colorization system.
 
 ## Technologies Used
 
@@ -418,7 +418,7 @@ This project demonstrates the practical application of generative AI for image c
 
 ## GitHub/Live Links
 
-**Repository**: https://github.com/aslin72/stable-diffusion-project  
+**Repository**: https://github.com/sumaiyahibrahim/AI-Image-Colorization.git  
 **Branch**: main  
 **Commit**: Complete AI Image Colorization Studio - All 6 Internship Tasks  
 **Status**: ✅ Ready for submission
@@ -438,11 +438,11 @@ This project demonstrates the practical application of generative AI for image c
 - ✅ Final report prepared
 
 ### Final Notes
-This project represents the successful completion of the ElevanceSkills Generative AI internship program. All six tasks have been implemented to a demonstrable, defensible standard, meeting the stated submission requirements for the full ₹3,000 stipend eligibility.
+This project represents the successful completion of the Generative AI internship program. All six tasks have been implemented to a demonstrable, defensible standard, meeting the stated submission requirements for the full stipend eligibility.
 
 ---
 
 **Project Status**: ✅ **COMPLETE**  
 **Date**: September 18, 2025  
-**Internship Program**: ElevanceSkills Generative AI  
-**Candidate**: B.Tech Information Technology Student
+**Internship Program**: Generative AI  
+**Candidate**: Sumaiya Ibrahim - B.Tech Information Technology

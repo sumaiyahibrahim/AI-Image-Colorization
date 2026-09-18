@@ -1,6 +1,9 @@
 """
 Base Colorization Pipeline using Stable Diffusion img2img
 This provides the foundation for all other colorization tasks.
+
+Author: Sumaiya Ibrahim
+Task: Foundation for all 6 internship tasks
 """
 
 import torch

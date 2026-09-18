@@ -1,6 +1,9 @@
 """
 Video Colorization Pipeline for Task 1
 Real-time multi-object colorization with semantic segmentation for video processing.
+
+Author: Sumaiya Ibrahim
+Task: Task 1 - Real-Time Multi-Object Colorization with Semantic Segmentation
 """
 
 import cv2

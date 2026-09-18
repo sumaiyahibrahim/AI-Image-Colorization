@@ -1,6 +1,9 @@
 """
 Cross-Domain Image Colorization Pipeline for Task 5
 Supports multiple input domains with domain-specific preprocessing and colorization.
+
+Author: Sumaiya Ibrahim
+Task: Task 5 - Cross-Domain Image Colorization
 """
 
 import numpy as np

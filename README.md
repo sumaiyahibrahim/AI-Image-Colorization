@@ -1,6 +1,6 @@
 # AI Image Colorization Studio
 
-**ElevanceSkills Generative AI Internship Project**
+**Generative AI Internship Project**
 
 A comprehensive AI-powered image colorization studio implementing all 6 internship tasks for real-time and batch image colorization using state-of-the-art generative AI techniques.
 
@@ -43,8 +43,8 @@ This project extends the original Stable Diffusion training project into a unifi
 
 1. **Clone the repository**:
 ```bash
-git clone https://github.com/aslin72/stable-diffusion-project.git
-cd stable-diffusion-project
+git clone https://github.com/sumaiyahibrahim/AI-Image-Colorization.git
+cd AI-Image-Colorization
 ```
 
 2. **Install dependencies**:
@@ -309,7 +309,7 @@ The project implements comprehensive quality evaluation metrics:
 
 ## 📝 Internship Submission
 
-This project successfully implements all 6 ElevanceSkills internship tasks:
+This project successfully implements all 6 internship tasks:
 
 1. ✅ **Task 1**: Real-Time Multi-Object Colorization with Semantic Segmentation
 2. ✅ **Task 2**: Conditional Image Colorization
@@ -341,7 +341,7 @@ This project is developed as part of the ElevanceSkills Generative AI internship
 
 ## 👤 Author
 
-**ElevanceSkills Internship Candidate**  
+**Sumaiya Ibrahim**  
 B.Tech Information Technology  
 Generative AI Internship Program
 
